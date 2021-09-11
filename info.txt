@@ -1,0 +1,2237 @@
+SMBIOS Header
+---------------------------------------
+Name				Type		Data
+====				====		====
+SMBIOS Signature        	4 BYTEs 	_SM_
+SMBIOS Checksum         	BYTE    	C8h
+SMBIOS Table Length     	BYTE    	31 bytes
+SMBIOS Version          	WORD    	3.0
+SMBIOS Max. Struc. Size 	WORD    	184
+SMBIOS Point Revision   	BYTE    	00h
+SMBIOS Formatted Area   	5 BYTEs 	00 00 00 00 00h
+DMI Signature           	5 BYTEs 	_DMI_
+DMI Checksum            	BYTE    	41h
+DMI Table Length        	WORD    	3915 bytes
+DMI Table Address       	DWORD   	000EBC60h
+SMBIOS # Sturc          	WORD    	115
+DMI Revision            	BYTE    	3.0
+==============================================================================
+
+
+[Type 000] -- BIOS Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	24 bytes
+Struc. Handle           	WORD    	0000h
+BIOS Vendor             	STRING  	American Megatrends Inc.
+BIOS Version            	STRING  	1903
+BIOS Starting Add. Seg. 	WORD    	F000h
+BIOS Release Date       	STRING  	12/05/2018
+BIOS ROM Size           	BYTE    	16384 KB
+BIOS Characteristics    	QWORD   	0000 0001 3F8B 9C80h
+						Bit.07:PCI is Reserved
+						Bit.10:APM is supported
+						Bit.11:BIOS is Upgradeable(Flash)
+						Bit.12:BIOS shadowing is allowed
+						Bit.15:Boot from CD is supported
+						Bit.16:Selectable Boot is supported
+						Bit.17:BIOS ROM is socketed
+						Bit.19:EDD(Enhanced Disk Drive) Specification is supported
+						Bit.23:Int 13h - 5.25" / 1.2MB Floppy Services are supported
+						Bit.24:Int 13h - 3.5" / 720 KB Floppy Services are supported
+						Bit.25:Int 13h - 3.5" / 2.88 MB Floppy Services are supported
+						Bit.26:Int 5h, Print Screen Service is supported
+						Bit.27:Int 9h, 8042 Keyboard services are supported
+						Bit.28:Int 14h,Serial Services are supported
+						Bit.29:Int 17h, Printer Services are supported
+						Bit.32~47:Reserved for BIOS Vendor
+BIOS Char. Extension    	WORD    	0D03h
+						Bit.00:ACPI is supported
+						Bit.01:USB Legacy is supported
+						Bit.08:BIOS Boot Specification is supported
+						Bit.10:Enable Targeted Content Distribution
+						Bit.11:UEFI Specification is supported
+						Bit.13~15:Reserved
+System BIOS Major       	BYTE    	05h
+System BIOS Minor       	BYTE    	0Bh
+Embedded Controller Firmware Major Release	BYTE    	FFh
+Embedded Controller Firmware Minor Release	BYTE    	FFh
+						
+==============================================================================
+
+
+[Type 001] -- System Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	27 bytes
+Struc. Handle           	WORD    	0001h
+Manufacturer            	STRING  	ASUS
+Product Name            	STRING  	All Series
+Version                 	STRING  	System Version
+Serial Number           	STRING  	System Serial Number
+UUID                    	16 BYTEs	20 A4 FC 45 22 C0 D3 11 9A 27 2C 56 DC 38 D4 EFh
+Wake-up Type            	BYTE    	06h
+						Power Switch
+SKUNumber               	STRING  	All
+Family                  	STRING  	ASUS MB
+==============================================================================
+
+
+[Type 002] -- Base Board/Module Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	15 bytes
+Struc. Handle           	WORD    	0002h
+Manufacturer            	STRING  	ASUSTeK COMPUTER INC.
+Product                 	STRING  	RAMPAGE V EDITION 10
+Version                 	STRING  	Rev 1.xx
+Serial Number           	STRING  	161085896800171
+Asset Tag               	STRING  	Default string
+Feature Flags           	BYTE    	09h
+						Bit.00:the board is a hosting board.
+						Bit.03:the board is replaceable.
+Location in Chassis     	STRING  	Default string
+Chassis Handle          	WORD    	0003h
+Board Type              	BYTE    	0Ah
+						Motherboard(includes processor, memory, and I/O)
+Number of Contained Object Handles	BYTE    	00h
+==============================================================================
+
+
+[Type 003] -- System Enclosure or Chassis
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	22 bytes
+Struc. Handle           	WORD    	0003h
+Manufacturer            	STRING  	Default string
+Type                    	BYTE    	03h
+						Desktop
+Version                 	STRING  	Default string
+Serial Number           	STRING  	Default string
+Asset Tag               	STRING  	Default string
+Bootup State            	BYTE    	03h
+						Safe
+Power Supply State      	BYTE    	03h
+						Safe
+Thermal State           	BYTE    	03h
+						Safe
+Security Status         	BYTE    	03h
+						None
+OEM-defined             	DWORD   	0000 0000h
+Height                  	BYTE    	00h
+Number of Power Cords   	BYTE    	01h
+Contained Element Count 	BYTE    	00h
+Contained Element Record Length	BYTE    	03h
+Contained Elements      	BYTEs   	None
+SKU Number              	STRING  	Default string
+==============================================================================
+
+
+[Type 004] -- Processor Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	42 bytes
+Struc. Handle           	WORD    	006Eh
+Socket Designation      	STRING  	SOCKET 2011
+Processor Type          	BYTE    	03h
+						Central Processor
+Processor Family        	BYTE    	B3h
+						Intel(R) Xeon(R) Processor
+Processor Manufacturer  	STRING  	Intel
+Processor ID            	DWORD   	0003 06F2h
+Processor Features      	DWORD   	BFEB FBFFh
+Processor Version       	STRING  	Intel(R) Core(TM) i7-5930K CPU @ 3.50GHz
+Voltage                 	BYTE    	8Ch
+						Bit.07:Set to 1, the remaining seven bits of the field are set  
+		      to contain the processor's current voltage times 10.
+						Current voltage = 1.2V
+External Clock          	WORD    	100 MHz
+Max Speed               	WORD    	4000 MHz
+Current Speed           	WORD    	3500 MHz
+Status                  	BYTE    	41h
+						Bit.06:CPU Socket Populated
+						CPU Enabled
+Processor Upgrade       	BYTE    	2Bh
+						Socket LGA2011-3
+L1 Cache Handle         	WORD    	006Bh
+L2 Cache Handle         	WORD    	006Ch
+L3 Cache Handle         	WORD    	006Dh
+Serial Number           	STRING  	
+Asset Tag               	STRING  	
+Part Number             	STRING  	
+Core Count              	BYTE    	06h
+Core Enabled            	BYTE    	06h
+Thread Count            	BYTE    	0Ch
+Processor Characteristics	WORD    	00FCh
+						Bit.02:64-Bit.Capable
+						Bit.03:Multi-Core
+						Bit.04:Hardware Thread
+						Bit.05:Execute Protection
+						Bit.06:Enhanced Virtualization
+						Bit.07:Power/Performance Control
+						Bit.08~15:Reserved
+Processor Family 2      	WORD    	00B3h
+						Intel(R) Xeon(R) Processor
+==============================================================================
+
+
+[Type 007] -- Cache Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	19 bytes
+Struc. Handle           	WORD    	006Bh
+Socket Designation      	STRING  	CPU Internal L1
+Cache Configuration     	WORD    	0180h
+						Cache Level - 1
+						Cache Socketed:Not Socketed
+						Location, relative to the CPU module:Internal
+						At boot time:Enable
+						Operational Mode:Write Back
+Maximum Cache Size      	WORD    	0180h
+						1K granularity [Max Size:384]
+Installed Size          	WORD    	0180h
+						1K granularity [Max Size:384]
+Supported SRAM Type     	WORD    	0002h
+						Bit.01:Unknown
+Current SRAM Type       	WORD    	0002h
+						Bit.01:Unknown
+Cache Speed             	BYTE    	00h
+						Unknown
+Error Correction Type   	BYTE    	04h
+						Parity
+System Cache Type       	BYTE    	01h
+						Other
+Associativity           	BYTE    	07h
+						8-way Set-Asociative
+==============================================================================
+
+
+[Type 007] -- Cache Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	19 bytes
+Struc. Handle           	WORD    	006Ch
+Socket Designation      	STRING  	CPU Internal L2
+Cache Configuration     	WORD    	0181h
+						Cache Level - 2
+						Cache Socketed:Not Socketed
+						Location, relative to the CPU module:Internal
+						At boot time:Enable
+						Operational Mode:Write Back
+Maximum Cache Size      	WORD    	0600h
+						1K granularity [Max Size:1536]
+Installed Size          	WORD    	0600h
+						1K granularity [Max Size:1536]
+Supported SRAM Type     	WORD    	0002h
+						Bit.01:Unknown
+Current SRAM Type       	WORD    	0002h
+						Bit.01:Unknown
+Cache Speed             	BYTE    	00h
+						Unknown
+Error Correction Type   	BYTE    	05h
+						Single-Bit.ECC
+System Cache Type       	BYTE    	05h
+						Unified
+Associativity           	BYTE    	07h
+						8-way Set-Asociative
+==============================================================================
+
+
+[Type 007] -- Cache Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	19 bytes
+Struc. Handle           	WORD    	006Dh
+Socket Designation      	STRING  	CPU Internal L3
+Cache Configuration     	WORD    	0182h
+						Cache Level - 3
+						Cache Socketed:Not Socketed
+						Location, relative to the CPU module:Internal
+						At boot time:Enable
+						Operational Mode:Write Back
+Maximum Cache Size      	WORD    	3C00h
+						1K granularity [Max Size:15360]
+Installed Size          	WORD    	3C00h
+						1K granularity [Max Size:15360]
+Supported SRAM Type     	WORD    	0002h
+						Bit.01:Unknown
+Current SRAM Type       	WORD    	0002h
+						Bit.01:Unknown
+Cache Speed             	BYTE    	00h
+						Unknown
+Error Correction Type   	BYTE    	05h
+						Single-Bit.ECC
+System Cache Type       	BYTE    	05h
+						Unified
+Associativity           	BYTE    	0Eh
+						20-way Set-Associative
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0004h
+Inter. Ref. Designator  	STRING  	KBMS
+Internal Connector Type 	BYTE    	00h
+						None
+Ext. Ref. Designator    	STRING  	KBMS
+Ext. Conn. Type         	BYTE    	0Fh
+						PS/2
+Port Type               	BYTE    	02h
+						Parallel Port PS/2
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0005h
+Inter. Ref. Designator  	STRING  	USB3.1_EC1_EA2
+Internal Connector Type 	BYTE    	00h
+						None
+Ext. Ref. Designator    	STRING  	USB3.1_EC1_EA2
+Ext. Conn. Type         	BYTE    	12h
+						Access Bus(USB)
+Port Type               	BYTE    	10h
+						USB
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0006h
+Inter. Ref. Designator  	STRING  	USB3.1_EC3_EA4
+Internal Connector Type 	BYTE    	00h
+						None
+Ext. Ref. Designator    	STRING  	USB3.1_EC3_EA4
+Ext. Conn. Type         	BYTE    	12h
+						Access Bus(USB)
+Port Type               	BYTE    	10h
+						USB
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0007h
+Inter. Ref. Designator  	STRING  	USB3_E1234
+Internal Connector Type 	BYTE    	00h
+						None
+Ext. Ref. Designator    	STRING  	USB3_E1234
+Ext. Conn. Type         	BYTE    	12h
+						Access Bus(USB)
+Port Type               	BYTE    	10h
+						USB
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0008h
+Inter. Ref. Designator  	STRING  	USB_78
+Internal Connector Type 	BYTE    	00h
+						None
+Ext. Ref. Designator    	STRING  	USB_78
+Ext. Conn. Type         	BYTE    	12h
+						Access Bus(USB)
+Port Type               	BYTE    	10h
+						USB
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0009h
+Inter. Ref. Designator  	STRING  	LAN1
+Internal Connector Type 	BYTE    	00h
+						None
+Ext. Ref. Designator    	STRING  	LAN1
+Ext. Conn. Type         	BYTE    	0Bh
+						RJ-45
+Port Type               	BYTE    	1Fh
+						Network Port
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	000Ah
+Inter. Ref. Designator  	STRING  	LAN2
+Internal Connector Type 	BYTE    	00h
+						None
+Ext. Ref. Designator    	STRING  	LAN2
+Ext. Conn. Type         	BYTE    	0Bh
+						RJ-45
+Port Type               	BYTE    	1Fh
+						Network Port
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	000Bh
+Inter. Ref. Designator  	STRING  	BT4
+Internal Connector Type 	BYTE    	00h
+						None
+Ext. Ref. Designator    	STRING  	BT4
+Ext. Conn. Type         	BYTE    	FFh
+						Other
+Port Type               	BYTE    	1Fh
+						Network Port
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	000Ch
+Inter. Ref. Designator  	STRING  	AUDIO
+Internal Connector Type 	BYTE    	00h
+						None
+Ext. Ref. Designator    	STRING  	AUDIO
+Ext. Conn. Type         	BYTE    	FFh
+						Other
+Port Type               	BYTE    	1Dh
+						Audio Port
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	000Dh
+Inter. Ref. Designator  	STRING  	SATA6G_12
+Internal Connector Type 	BYTE    	22h
+						SAS/SATA Plug Receptacle
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	20h
+						SATA
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	000Eh
+Inter. Ref. Designator  	STRING  	SATA6G_34
+Internal Connector Type 	BYTE    	22h
+						SAS/SATA Plug Receptacle
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	20h
+						SATA
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	000Fh
+Inter. Ref. Designator  	STRING  	SATA6G_56
+Internal Connector Type 	BYTE    	22h
+						SAS/SATA Plug Receptacle
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	20h
+						SATA
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0010h
+Inter. Ref. Designator  	STRING  	SATA6G_78
+Internal Connector Type 	BYTE    	22h
+						SAS/SATA Plug Receptacle
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	20h
+						SATA
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0011h
+Inter. Ref. Designator  	STRING  	SATA6G_910
+Internal Connector Type 	BYTE    	22h
+						SAS/SATA Plug Receptacle
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	20h
+						SATA
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0012h
+Inter. Ref. Designator  	STRING  	M.2(SOCKET3)
+Internal Connector Type 	BYTE    	FFh
+						Other
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	FFh
+						Other
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0013h
+Inter. Ref. Designator  	STRING  	U.2
+Internal Connector Type 	BYTE    	FFh
+						Other
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	FFh
+						Other
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0014h
+Inter. Ref. Designator  	STRING  	USB3_12
+Internal Connector Type 	BYTE    	12h
+						Access Bus(USB)
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	10h
+						USB
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0015h
+Inter. Ref. Designator  	STRING  	USB3_34
+Internal Connector Type 	BYTE    	12h
+						Access Bus(USB)
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	10h
+						USB
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0016h
+Inter. Ref. Designator  	STRING  	USB1314
+Internal Connector Type 	BYTE    	12h
+						Access Bus(USB)
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	10h
+						USB
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0017h
+Inter. Ref. Designator  	STRING  	TPM
+Internal Connector Type 	BYTE    	FFh
+						Other
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	FFh
+						Other
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0018h
+Inter. Ref. Designator  	STRING  	AAFP
+Internal Connector Type 	BYTE    	FFh
+						Other
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	FFh
+						Other
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0019h
+Inter. Ref. Designator  	STRING  	CPU_FAN
+Internal Connector Type 	BYTE    	FFh
+						Other
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	FFh
+						Other
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	001Ah
+Inter. Ref. Designator  	STRING  	CPU_OPT
+Internal Connector Type 	BYTE    	FFh
+						Other
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	FFh
+						Other
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	001Bh
+Inter. Ref. Designator  	STRING  	CHA_FAN1
+Internal Connector Type 	BYTE    	FFh
+						Other
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	FFh
+						Other
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	001Ch
+Inter. Ref. Designator  	STRING  	CHA_FAN2
+Internal Connector Type 	BYTE    	FFh
+						Other
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	FFh
+						Other
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	001Dh
+Inter. Ref. Designator  	STRING  	CHA_FAN3
+Internal Connector Type 	BYTE    	FFh
+						Other
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	FFh
+						Other
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	001Eh
+Inter. Ref. Designator  	STRING  	H_AMP_FAN
+Internal Connector Type 	BYTE    	FFh
+						Other
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	FFh
+						Other
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	001Fh
+Inter. Ref. Designator  	STRING  	W_PUMP
+Internal Connector Type 	BYTE    	FFh
+						Other
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	FFh
+						Other
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0020h
+Inter. Ref. Designator  	STRING  	EXT_FAN
+Internal Connector Type 	BYTE    	FFh
+						Other
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	FFh
+						Other
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0021h
+Inter. Ref. Designator  	STRING  	T_SENSOR1
+Internal Connector Type 	BYTE    	FFh
+						Other
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	FFh
+						Other
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0022h
+Inter. Ref. Designator  	STRING  	TB_HEADER
+Internal Connector Type 	BYTE    	FFh
+						Other
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	FFh
+						Other
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0023h
+Inter. Ref. Designator  	STRING  	RGB_HEADER
+Internal Connector Type 	BYTE    	FFh
+						Other
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	FFh
+						Other
+==============================================================================
+
+
+[Type 008] -- Port Connector Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	9 bytes
+Struc. Handle           	WORD    	0024h
+Inter. Ref. Designator  	STRING  	ROG_EXT
+Internal Connector Type 	BYTE    	FFh
+						Other
+Ext. Ref. Designator    	STRING  	
+Ext. Conn. Type         	BYTE    	00h
+						None
+Port Type               	BYTE    	FFh
+						Other
+==============================================================================
+
+
+[Type 009] -- System Slots
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	17 bytes
+Struc. Handle           	WORD    	0025h
+Slot Designation        	STRING  	PCIEX16_1
+Slot Type               	BYTE    	B1h
+						PCI Express Gen 3
+Slot Data Bus Width     	BYTE    	0Dh
+						16x or x16
+Current Usage           	BYTE    	04h
+						In use
+Slot Length             	BYTE    	04h
+						Long Length
+Slot ID                 	WORD    	0000h
+Slot Characteristics 1  	BYTE    	0Ch
+						Bit.2:Provides 3.3 Volts
+						Bit.3:Slot's opening is shared with another slot.
+Slot Characteristics 2  	BYTE    	01h
+						Bit.0:PCI slot supports PME# signal
+Segment Group Number    	WORD    	0000h
+Bus Number              	BYTE    	01h
+Device/Function Number  	BYTE    	00h
+						Device Number:00h
+						function number:00h
+==============================================================================
+
+
+[Type 009] -- System Slots
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	17 bytes
+Struc. Handle           	WORD    	0026h
+Slot Designation        	STRING  	PCIEX8_2
+Slot Type               	BYTE    	B1h
+						PCI Express Gen 3
+Slot Data Bus Width     	BYTE    	0Bh
+						8x or x8
+Current Usage           	BYTE    	03h
+						Available
+Slot Length             	BYTE    	03h
+						Short Length
+Slot ID                 	WORD    	0001h
+Slot Characteristics 1  	BYTE    	0Ch
+						Bit.2:Provides 3.3 Volts
+						Bit.3:Slot's opening is shared with another slot.
+Slot Characteristics 2  	BYTE    	01h
+						Bit.0:PCI slot supports PME# signal
+Segment Group Number    	WORD    	0000h
+Bus Number              	BYTE    	FFh
+Device/Function Number  	BYTE    	02h
+						Device Number:00h
+						function number:02h
+==============================================================================
+
+
+[Type 009] -- System Slots
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	17 bytes
+Struc. Handle           	WORD    	0027h
+Slot Designation        	STRING  	PCIEX4_1
+Slot Type               	BYTE    	B1h
+						PCI Express Gen 3
+Slot Data Bus Width     	BYTE    	0Ah
+						4x or x4
+Current Usage           	BYTE    	03h
+						Available
+Slot Length             	BYTE    	04h
+						Long Length
+Slot ID                 	WORD    	0002h
+Slot Characteristics 1  	BYTE    	0Ch
+						Bit.2:Provides 3.3 Volts
+						Bit.3:Slot's opening is shared with another slot.
+Slot Characteristics 2  	BYTE    	01h
+						Bit.0:PCI slot supports PME# signal
+Segment Group Number    	WORD    	0000h
+Bus Number              	BYTE    	04h
+Device/Function Number  	BYTE    	00h
+						Device Number:00h
+						function number:00h
+==============================================================================
+
+
+[Type 009] -- System Slots
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	17 bytes
+Struc. Handle           	WORD    	0028h
+Slot Designation        	STRING  	PCIEX16/X8_3
+Slot Type               	BYTE    	B1h
+						PCI Express Gen 3
+Slot Data Bus Width     	BYTE    	0Dh
+						16x or x16
+Current Usage           	BYTE    	03h
+						Available
+Slot Length             	BYTE    	04h
+						Long Length
+Slot ID                 	WORD    	0003h
+Slot Characteristics 1  	BYTE    	0Ch
+						Bit.2:Provides 3.3 Volts
+						Bit.3:Slot's opening is shared with another slot.
+Slot Characteristics 2  	BYTE    	01h
+						Bit.0:PCI slot supports PME# signal
+Segment Group Number    	WORD    	0000h
+Bus Number              	BYTE    	FFh
+Device/Function Number  	BYTE    	00h
+						Device Number:00h
+						function number:00h
+==============================================================================
+
+
+[Type 009] -- System Slots
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	17 bytes
+Struc. Handle           	WORD    	0029h
+Slot Designation        	STRING  	PCIEX1_1
+Slot Type               	BYTE    	B1h
+						PCI Express Gen 3
+Slot Data Bus Width     	BYTE    	08h
+						1x or x1
+Current Usage           	BYTE    	03h
+						Available
+Slot Length             	BYTE    	04h
+						Long Length
+Slot ID                 	WORD    	0004h
+Slot Characteristics 1  	BYTE    	0Ch
+						Bit.2:Provides 3.3 Volts
+						Bit.3:Slot's opening is shared with another slot.
+Slot Characteristics 2  	BYTE    	01h
+						Bit.0:PCI slot supports PME# signal
+Segment Group Number    	WORD    	0000h
+Bus Number              	BYTE    	09h
+Device/Function Number  	BYTE    	07h
+						Device Number:00h
+						function number:07h
+==============================================================================
+
+
+[Type 009] -- System Slots
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	17 bytes
+Struc. Handle           	WORD    	002Ah
+Slot Designation        	STRING  	PCIEX8_4
+Slot Type               	BYTE    	B1h
+						PCI Express Gen 3
+Slot Data Bus Width     	BYTE    	0Bh
+						8x or x8
+Current Usage           	BYTE    	03h
+						Available
+Slot Length             	BYTE    	04h
+						Long Length
+Slot ID                 	WORD    	0005h
+Slot Characteristics 1  	BYTE    	0Ch
+						Bit.2:Provides 3.3 Volts
+						Bit.3:Slot's opening is shared with another slot.
+Slot Characteristics 2  	BYTE    	01h
+						Bit.0:PCI slot supports PME# signal
+Segment Group Number    	WORD    	0000h
+Bus Number              	BYTE    	0Bh
+Device/Function Number  	BYTE    	00h
+						Device Number:00h
+						function number:00h
+==============================================================================
+
+
+[Type 010] -- On Board Devices Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	6 bytes
+Struc. Handle           	WORD    	002Bh
+Device Type             	BYTE    	83h
+						Device Enabled
+						Video
+Description String      	STRING  	   To Be Filled By O.E.M.
+==============================================================================
+
+
+[Type 011] -- OEM Strings
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	5 bytes
+Struc. Handle           	WORD    	002Ch
+Count                   	BYTE    	04h
+String #1               	STRING  	Default string
+String #2               	STRING  	Default string
+String #3               	STRING  	ERDINGER
+String #4               	STRING  	Default string
+==============================================================================
+
+
+[Type 012] -- System Configuration Options
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	5 bytes
+Struc. Handle           	WORD    	002Dh
+Count                   	BYTE    	01h
+String #1               	STRING  	Default string
+==============================================================================
+
+
+[Type 013] -- BIOS Language Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	22 bytes
+Struc. Handle           	WORD    	0071h
+Installable Languages   	BYTE    	03h
+Flags                   	BYTE    	00h
+						The Current Language strings use the long format
+Reserved                	15 BYTEs	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00h
+Current Language        	STRING  	en|US|iso8859-1
+==============================================================================
+
+
+[Type 016] -- Physical Memory Array
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	23 bytes
+Struc. Handle           	WORD    	0060h
+Location                	BYTE    	03h
+						System board or motherboard
+Use                     	BYTE    	03h
+						System memory
+Memory Error Correction 	BYTE    	03h
+						None
+Maximum Capacity        	DWORD   	2000 0000h
+						536870912 KB
+Mem. Err. Info. Handle  	WORD    	FFFEh
+						The system does not provide the error information structure.
+Number of Memory Devices	WORD    	0008h
+Extended Maximum Capacity	QWORD   	0000 0000 0000 0000h
+==============================================================================
+
+
+[Type 017] -- Memory Device
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	40 bytes
+Struc. Handle           	WORD    	0062h
+Phys. Mem. Array Handle 	WORD    	0060h
+Mem. Err. Info. Handle  	WORD    	FFFEh
+						The system does not provide the error information structure.
+Total Width             	WORD    	0048h
+						72 bits
+Data Width              	WORD    	0048h
+						72 bits
+Size                    	WORD    	4000h
+						16384 MB
+Form Factor             	BYTE    	09h
+						DIMM
+Device Set              	BYTE    	00h
+						The device is not part of a set
+Device Locator          	STRING  	DIMM_A1
+Bank Locator            	STRING  	NODE 1
+Memory Type             	BYTE    	1Ah
+						DDR4
+Type Detail             	WORD    	0080h
+						Bit.07:Synchronous
+Speed                   	WORD    	0855h
+Manufacturer            	STRING  	G-Skill
+Serial Number           	STRING  	00000000
+Asset Tag               	STRING  	DIMM_A1_AssetTag
+Part Number             	STRING  	F4-2800C15-16GVR   
+Attributes              	BYTE    	02h
+Extended Size           	DWORD   	0000 0000h
+Configured Memory Clock Speed	WORD    	0855h
+Minimum voltage         	WORD    	0000h
+Maximum voltage         	WORD    	0000h
+Configured voltage      	WORD    	0000h
+==============================================================================
+
+
+[Type 017] -- Memory Device
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	40 bytes
+Struc. Handle           	WORD    	0064h
+Phys. Mem. Array Handle 	WORD    	0060h
+Mem. Err. Info. Handle  	WORD    	FFFEh
+						The system does not provide the error information structure.
+Total Width             	WORD    	0000h
+						0 bits
+Data Width              	WORD    	0000h
+						0 bits
+Size                    	WORD    	0000h
+						No memory device is installed in the socket
+Form Factor             	BYTE    	09h
+						DIMM
+Device Set              	BYTE    	00h
+						The device is not part of a set
+Device Locator          	STRING  	DIMM_A2
+Bank Locator            	STRING  	NODE 1
+Memory Type             	BYTE    	1Ah
+						DDR4
+Type Detail             	WORD    	0080h
+						Bit.07:Synchronous
+Speed                   	WORD    	0000h
+Manufacturer            	STRING  	NO DIMM
+Serial Number           	STRING  	NO DIMM
+Asset Tag               	STRING  	NO DIMM
+Part Number             	STRING  	NO DIMM
+Attributes              	BYTE    	00h
+Extended Size           	DWORD   	0000 0000h
+Configured Memory Clock Speed	WORD    	0000h
+Minimum voltage         	WORD    	0000h
+Maximum voltage         	WORD    	0000h
+Configured voltage      	WORD    	0000h
+==============================================================================
+
+
+[Type 017] -- Memory Device
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	40 bytes
+Struc. Handle           	WORD    	0065h
+Phys. Mem. Array Handle 	WORD    	0060h
+Mem. Err. Info. Handle  	WORD    	FFFEh
+						The system does not provide the error information structure.
+Total Width             	WORD    	0000h
+						0 bits
+Data Width              	WORD    	0000h
+						0 bits
+Size                    	WORD    	0000h
+						No memory device is installed in the socket
+Form Factor             	BYTE    	09h
+						DIMM
+Device Set              	BYTE    	00h
+						The device is not part of a set
+Device Locator          	STRING  	DIMM_B1
+Bank Locator            	STRING  	NODE 1
+Memory Type             	BYTE    	1Ah
+						DDR4
+Type Detail             	WORD    	0080h
+						Bit.07:Synchronous
+Speed                   	WORD    	0000h
+Manufacturer            	STRING  	NO DIMM
+Serial Number           	STRING  	NO DIMM
+Asset Tag               	STRING  	NO DIMM
+Part Number             	STRING  	NO DIMM
+Attributes              	BYTE    	00h
+Extended Size           	DWORD   	0000 0000h
+Configured Memory Clock Speed	WORD    	0000h
+Minimum voltage         	WORD    	0000h
+Maximum voltage         	WORD    	0000h
+Configured voltage      	WORD    	0000h
+==============================================================================
+
+
+[Type 017] -- Memory Device
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	40 bytes
+Struc. Handle           	WORD    	0066h
+Phys. Mem. Array Handle 	WORD    	0060h
+Mem. Err. Info. Handle  	WORD    	FFFEh
+						The system does not provide the error information structure.
+Total Width             	WORD    	0000h
+						0 bits
+Data Width              	WORD    	0000h
+						0 bits
+Size                    	WORD    	0000h
+						No memory device is installed in the socket
+Form Factor             	BYTE    	09h
+						DIMM
+Device Set              	BYTE    	00h
+						The device is not part of a set
+Device Locator          	STRING  	DIMM_B2
+Bank Locator            	STRING  	NODE 1
+Memory Type             	BYTE    	1Ah
+						DDR4
+Type Detail             	WORD    	0080h
+						Bit.07:Synchronous
+Speed                   	WORD    	0000h
+Manufacturer            	STRING  	NO DIMM
+Serial Number           	STRING  	NO DIMM
+Asset Tag               	STRING  	NO DIMM
+Part Number             	STRING  	NO DIMM
+Attributes              	BYTE    	00h
+Extended Size           	DWORD   	0000 0000h
+Configured Memory Clock Speed	WORD    	0000h
+Minimum voltage         	WORD    	0000h
+Maximum voltage         	WORD    	0000h
+Configured voltage      	WORD    	0000h
+==============================================================================
+
+
+[Type 017] -- Memory Device
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	40 bytes
+Struc. Handle           	WORD    	0067h
+Phys. Mem. Array Handle 	WORD    	0060h
+Mem. Err. Info. Handle  	WORD    	FFFEh
+						The system does not provide the error information structure.
+Total Width             	WORD    	0000h
+						0 bits
+Data Width              	WORD    	0000h
+						0 bits
+Size                    	WORD    	0000h
+						No memory device is installed in the socket
+Form Factor             	BYTE    	09h
+						DIMM
+Device Set              	BYTE    	00h
+						The device is not part of a set
+Device Locator          	STRING  	DIMM_C1
+Bank Locator            	STRING  	NODE 1
+Memory Type             	BYTE    	1Ah
+						DDR4
+Type Detail             	WORD    	0080h
+						Bit.07:Synchronous
+Speed                   	WORD    	0000h
+Manufacturer            	STRING  	NO DIMM
+Serial Number           	STRING  	NO DIMM
+Asset Tag               	STRING  	NO DIMM
+Part Number             	STRING  	NO DIMM
+Attributes              	BYTE    	00h
+Extended Size           	DWORD   	0000 0000h
+Configured Memory Clock Speed	WORD    	0000h
+Minimum voltage         	WORD    	0000h
+Maximum voltage         	WORD    	0000h
+Configured voltage      	WORD    	0000h
+==============================================================================
+
+
+[Type 017] -- Memory Device
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	40 bytes
+Struc. Handle           	WORD    	0068h
+Phys. Mem. Array Handle 	WORD    	0060h
+Mem. Err. Info. Handle  	WORD    	FFFEh
+						The system does not provide the error information structure.
+Total Width             	WORD    	0000h
+						0 bits
+Data Width              	WORD    	0000h
+						0 bits
+Size                    	WORD    	0000h
+						No memory device is installed in the socket
+Form Factor             	BYTE    	09h
+						DIMM
+Device Set              	BYTE    	00h
+						The device is not part of a set
+Device Locator          	STRING  	DIMM_C2
+Bank Locator            	STRING  	NODE 1
+Memory Type             	BYTE    	1Ah
+						DDR4
+Type Detail             	WORD    	0080h
+						Bit.07:Synchronous
+Speed                   	WORD    	0000h
+Manufacturer            	STRING  	NO DIMM
+Serial Number           	STRING  	NO DIMM
+Asset Tag               	STRING  	NO DIMM
+Part Number             	STRING  	NO DIMM
+Attributes              	BYTE    	00h
+Extended Size           	DWORD   	0000 0000h
+Configured Memory Clock Speed	WORD    	0000h
+Minimum voltage         	WORD    	0000h
+Maximum voltage         	WORD    	0000h
+Configured voltage      	WORD    	0000h
+==============================================================================
+
+
+[Type 017] -- Memory Device
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	40 bytes
+Struc. Handle           	WORD    	0069h
+Phys. Mem. Array Handle 	WORD    	0060h
+Mem. Err. Info. Handle  	WORD    	FFFEh
+						The system does not provide the error information structure.
+Total Width             	WORD    	0000h
+						0 bits
+Data Width              	WORD    	0000h
+						0 bits
+Size                    	WORD    	0000h
+						No memory device is installed in the socket
+Form Factor             	BYTE    	09h
+						DIMM
+Device Set              	BYTE    	00h
+						The device is not part of a set
+Device Locator          	STRING  	DIMM_D1
+Bank Locator            	STRING  	NODE 1
+Memory Type             	BYTE    	1Ah
+						DDR4
+Type Detail             	WORD    	0080h
+						Bit.07:Synchronous
+Speed                   	WORD    	0000h
+Manufacturer            	STRING  	NO DIMM
+Serial Number           	STRING  	NO DIMM
+Asset Tag               	STRING  	NO DIMM
+Part Number             	STRING  	NO DIMM
+Attributes              	BYTE    	00h
+Extended Size           	DWORD   	0000 0000h
+Configured Memory Clock Speed	WORD    	0000h
+Minimum voltage         	WORD    	0000h
+Maximum voltage         	WORD    	0000h
+Configured voltage      	WORD    	0000h
+==============================================================================
+
+
+[Type 017] -- Memory Device
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	40 bytes
+Struc. Handle           	WORD    	006Ah
+Phys. Mem. Array Handle 	WORD    	0060h
+Mem. Err. Info. Handle  	WORD    	FFFEh
+						The system does not provide the error information structure.
+Total Width             	WORD    	0000h
+						0 bits
+Data Width              	WORD    	0000h
+						0 bits
+Size                    	WORD    	0000h
+						No memory device is installed in the socket
+Form Factor             	BYTE    	09h
+						DIMM
+Device Set              	BYTE    	00h
+						The device is not part of a set
+Device Locator          	STRING  	DIMM_D2
+Bank Locator            	STRING  	NODE 1
+Memory Type             	BYTE    	1Ah
+						DDR4
+Type Detail             	WORD    	0080h
+						Bit.07:Synchronous
+Speed                   	WORD    	0000h
+Manufacturer            	STRING  	NO DIMM
+Serial Number           	STRING  	NO DIMM
+Asset Tag               	STRING  	NO DIMM
+Part Number             	STRING  	NO DIMM
+Attributes              	BYTE    	00h
+Extended Size           	DWORD   	0000 0000h
+Configured Memory Clock Speed	WORD    	0000h
+Minimum voltage         	WORD    	0000h
+Maximum voltage         	WORD    	0000h
+Configured voltage      	WORD    	0000h
+==============================================================================
+
+
+[Type 019] -- Memory Array Mapped Address
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	31 bytes
+Struc. Handle           	WORD    	0061h
+Starting Address        	DWORD   	0000 0000h
+End Address             	DWORD   	00FF FFFFh
+Mem. Array Handle       	WORD    	0060h
+Partition Width         	BYTE    	01h
+Extended Starting Address	QWORD   	0000 0000 0000 0000h
+Extended Ending Address 	QWORD   	0000 0000 0000 0000h
+==============================================================================
+
+
+[Type 020] -- Memory Device Mapped Address
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	35 bytes
+Struc. Handle           	WORD    	0063h
+Starting Address        	DWORD   	0000 0000h
+End Address             	DWORD   	00FF FFFFh
+Memory Device Handle    	WORD    	0062h
+Mem. Map. Add. Handle   	WORD    	0061h
+Partition Row Position  	BYTE    	01h
+Interleave Position     	BYTE    	00h
+Interleaved Data Depth  	BYTE    	00h
+Extended Starting Address	QWORD   	0000 0000 0000 0000h
+Extended Ending Address 	QWORD   	0000 0000 0000 0000h
+==============================================================================
+
+
+[Type 026] -- Voltage Probe
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	22 bytes
+Struc. Handle           	WORD    	0030h
+Description             	STRING  	LM78A
+Location and Status     	BYTE    	00h
+						Not define
+						Not define
+Max. value in mil.      	WORD    	8000h
+Mini. value in mil.     	WORD    	8000h
+Resolution              	WORD    	8000h
+Tolerance               	WORD    	8000h
+Accuracy                	WORD    	8000h
+OEM-defined             	DWORD   	0000 0000h
+Nominal Value           	WORD    	8000h
+==============================================================================
+
+
+[Type 026] -- Voltage Probe
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	22 bytes
+Struc. Handle           	WORD    	0040h
+Description             	STRING  	LM78B
+Location and Status     	BYTE    	00h
+						Not define
+						Not define
+Max. value in mil.      	WORD    	8000h
+Mini. value in mil.     	WORD    	8000h
+Resolution              	WORD    	8000h
+Tolerance               	WORD    	8000h
+Accuracy                	WORD    	8000h
+OEM-defined             	DWORD   	0000 0000h
+Nominal Value           	WORD    	8000h
+==============================================================================
+
+
+[Type 026] -- Voltage Probe
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	22 bytes
+Struc. Handle           	WORD    	0043h
+Description             	STRING  	LM78B
+Location and Status     	BYTE    	00h
+						Not define
+						Not define
+Max. value in mil.      	WORD    	8000h
+Mini. value in mil.     	WORD    	8000h
+Resolution              	WORD    	8000h
+Tolerance               	WORD    	8000h
+Accuracy                	WORD    	8000h
+OEM-defined             	DWORD   	0000 0000h
+Nominal Value           	WORD    	8000h
+==============================================================================
+
+
+[Type 026] -- Voltage Probe
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	22 bytes
+Struc. Handle           	WORD    	0058h
+Description             	STRING  	LM78A
+Location and Status     	BYTE    	6Ah
+						Location:Power Unit
+						Status:OK
+Max. value in mil.      	WORD    	8000h
+Mini. value in mil.     	WORD    	8000h
+Resolution              	WORD    	8000h
+Tolerance               	WORD    	8000h
+Accuracy                	WORD    	8000h
+OEM-defined             	DWORD   	0000 0000h
+Nominal Value           	WORD    	8000h
+==============================================================================
+
+
+[Type 027] -- Cooling Device
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	15 bytes
+Struc. Handle           	WORD    	0036h
+Temperature Probe Handle	WORD    	0033h
+Device Type and Status  	BYTE    	12h
+						Not define
+						Not define
+Cooling Unit Group      	BYTE    	01h
+OEM-defined             	DWORD   	0000 0000h
+Nominal Speed           	WORD    	8000h
+Nominal Speed           	STRING  	Cooling Dev 1
+==============================================================================
+
+
+[Type 027] -- Cooling Device
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	15 bytes
+Struc. Handle           	WORD    	0039h
+Temperature Probe Handle	WORD    	0033h
+Device Type and Status  	BYTE    	12h
+						Not define
+						Not define
+Cooling Unit Group      	BYTE    	01h
+OEM-defined             	DWORD   	0000 0000h
+Nominal Speed           	WORD    	8000h
+Nominal Speed           	STRING  	
+==============================================================================
+
+
+[Type 027] -- Cooling Device
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	15 bytes
+Struc. Handle           	WORD    	0049h
+Temperature Probe Handle	WORD    	0046h
+Device Type and Status  	BYTE    	12h
+						Not define
+						Not define
+Cooling Unit Group      	BYTE    	01h
+OEM-defined             	DWORD   	0000 0000h
+Nominal Speed           	WORD    	8000h
+Nominal Speed           	STRING  	Cooling Dev 2
+==============================================================================
+
+
+[Type 027] -- Cooling Device
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	15 bytes
+Struc. Handle           	WORD    	004Fh
+Temperature Probe Handle	WORD    	004Ch
+Device Type and Status  	BYTE    	12h
+						Not define
+						Not define
+Cooling Unit Group      	BYTE    	01h
+OEM-defined             	DWORD   	0000 0000h
+Nominal Speed           	WORD    	8000h
+Nominal Speed           	STRING  	Cooling Dev 2
+==============================================================================
+
+
+[Type 027] -- Cooling Device
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	15 bytes
+Struc. Handle           	WORD    	005Ah
+Temperature Probe Handle	WORD    	0059h
+Device Type and Status  	BYTE    	67h
+						Device Type:Power Supply Fan
+						Status:OK
+Cooling Unit Group      	BYTE    	01h
+OEM-defined             	DWORD   	0000 0000h
+Nominal Speed           	WORD    	8000h
+Nominal Speed           	STRING  	Cooling Dev 1
+==============================================================================
+
+
+[Type 028] -- Temperature Probe
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	22 bytes
+Struc. Handle           	WORD    	0033h
+Description             	STRING  	LM78A
+Location and Status     	BYTE    	00h
+						Not define
+						Not define
+Maximum Value           	WORD    	8000h
+Minimum Value           	WORD    	8000h
+Resolution              	WORD    	8000h
+Tolerance               	WORD    	8000h
+Accuracy                	WORD    	8000h
+OEM-defined             	DWORD   	0000 0000h
+Nominal Value           	WORD    	8000h
+==============================================================================
+
+
+[Type 028] -- Temperature Probe
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	22 bytes
+Struc. Handle           	WORD    	0046h
+Description             	STRING  	LM78B
+Location and Status     	BYTE    	00h
+						Not define
+						Not define
+Maximum Value           	WORD    	8000h
+Minimum Value           	WORD    	8000h
+Resolution              	WORD    	8000h
+Tolerance               	WORD    	8000h
+Accuracy                	WORD    	8000h
+OEM-defined             	DWORD   	0000 0000h
+Nominal Value           	WORD    	8000h
+==============================================================================
+
+
+[Type 028] -- Temperature Probe
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	22 bytes
+Struc. Handle           	WORD    	004Ch
+Description             	STRING  	LM78B
+Location and Status     	BYTE    	00h
+						Not define
+						Not define
+Maximum Value           	WORD    	8000h
+Minimum Value           	WORD    	8000h
+Resolution              	WORD    	8000h
+Tolerance               	WORD    	8000h
+Accuracy                	WORD    	8000h
+OEM-defined             	DWORD   	0000 0000h
+Nominal Value           	WORD    	8000h
+==============================================================================
+
+
+[Type 028] -- Temperature Probe
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	22 bytes
+Struc. Handle           	WORD    	0059h
+Description             	STRING  	LM78A
+Location and Status     	BYTE    	6Ah
+						Location:Power Unit
+						Power supply is present
+Maximum Value           	WORD    	8000h
+Minimum Value           	WORD    	8000h
+Resolution              	WORD    	8000h
+Tolerance               	WORD    	8000h
+Accuracy                	WORD    	8000h
+OEM-defined             	DWORD   	0000 0000h
+Nominal Value           	WORD    	8000h
+==============================================================================
+
+
+[Type 029] -- Electrical Current Probe
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	22 bytes
+Struc. Handle           	WORD    	003Ch
+Description             	STRING  	ABC
+Location and Status     	BYTE    	00h
+						Not define
+						Not define
+Maximum Value           	WORD    	8000h
+Minimum Value           	WORD    	8000h
+Resolution              	WORD    	8000h
+Tolerance               	WORD    	8000h
+Accuracy                	WORD    	8000h
+OEM-defined             	DWORD   	0000 0000h
+Nominal Value           	WORD    	8000h
+==============================================================================
+
+
+[Type 029] -- Electrical Current Probe
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	22 bytes
+Struc. Handle           	WORD    	0052h
+Description             	STRING  	DEF
+Location and Status     	BYTE    	00h
+						Not define
+						Not define
+Maximum Value           	WORD    	8000h
+Minimum Value           	WORD    	8000h
+Resolution              	WORD    	8000h
+Tolerance               	WORD    	8000h
+Accuracy                	WORD    	8000h
+OEM-defined             	DWORD   	0000 0000h
+Nominal Value           	WORD    	8000h
+==============================================================================
+
+
+[Type 029] -- Electrical Current Probe
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	22 bytes
+Struc. Handle           	WORD    	0055h
+Description             	STRING  	GHI
+Location and Status     	BYTE    	00h
+						Not define
+						Not define
+Maximum Value           	WORD    	8000h
+Minimum Value           	WORD    	8000h
+Resolution              	WORD    	8000h
+Tolerance               	WORD    	8000h
+Accuracy                	WORD    	8000h
+OEM-defined             	DWORD   	0000 0000h
+Nominal Value           	WORD    	8000h
+==============================================================================
+
+
+[Type 029] -- Electrical Current Probe
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	22 bytes
+Struc. Handle           	WORD    	005Bh
+Description             	STRING  	ABC
+Location and Status     	BYTE    	6Ah
+						Location:Power Unit
+						Status:OK
+Maximum Value           	WORD    	8000h
+Minimum Value           	WORD    	8000h
+Resolution              	WORD    	8000h
+Tolerance               	WORD    	8000h
+Accuracy                	WORD    	8000h
+OEM-defined             	DWORD   	0000 0000h
+Nominal Value           	WORD    	8000h
+==============================================================================
+
+
+[Type 032] -- System Boot Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	20 bytes
+Struc. Handle           	WORD    	002Eh
+Reserved                	6 BYTEs 	00 00 00 00 00 00h
+Boot Status             	10 BYTEs	00 00 00 00 00 00 00 00 00 00h
+						No errors detected
+==============================================================================
+
+
+[Type 034] -- Management Device
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	11 bytes
+Struc. Handle           	WORD    	002Fh
+Description             	STRING  	UNKNOWN
+Type                    	BYTE    	02h
+						Unknown
+Address                 	DWORD   	0000 0000h
+Address Type            	BYTE    	02h
+						Unknown
+==============================================================================
+
+
+[Type 034] -- Management Device
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	16 bytes
+Struc. Handle           	WORD    	003Fh
+Description             	STRING  	WN-2
+Type                    	BYTE    	02h
+						Unknown
+Address                 	DWORD   	0000 0000h
+Address Type            	BYTE    	02h
+						Unknown
+Unknown                 	BYTEs   	55 4E 4B 4E 4Fh
+==============================================================================
+
+
+[Type 035] -- Management Device Component
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	11 bytes
+Struc. Handle           	WORD    	0032h
+Description             	STRING  	Default string
+Management Device Handle	WORD    	002Fh
+Component Handle        	WORD    	002Fh
+Threshold Handle        	WORD    	0030h
+==============================================================================
+
+
+[Type 035] -- Management Device Component
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	11 bytes
+Struc. Handle           	WORD    	0035h
+Description             	STRING  	Default string
+Management Device Handle	WORD    	002Fh
+Component Handle        	WORD    	0032h
+Threshold Handle        	WORD    	0033h
+==============================================================================
+
+
+[Type 035] -- Management Device Component
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	11 bytes
+Struc. Handle           	WORD    	0038h
+Description             	STRING  	Default string
+Management Device Handle	WORD    	002Fh
+Component Handle        	WORD    	0035h
+Threshold Handle        	WORD    	0036h
+==============================================================================
+
+
+[Type 035] -- Management Device Component
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	11 bytes
+Struc. Handle           	WORD    	003Bh
+Description             	STRING  	Default string
+Management Device Handle	WORD    	002Fh
+Component Handle        	WORD    	0038h
+Threshold Handle        	WORD    	0039h
+==============================================================================
+
+
+[Type 035] -- Management Device Component
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	11 bytes
+Struc. Handle           	WORD    	003Eh
+Description             	STRING  	Default string
+Management Device Handle	WORD    	002Fh
+Component Handle        	WORD    	003Bh
+Threshold Handle        	WORD    	0039h
+==============================================================================
+
+
+[Type 035] -- Management Device Component
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	11 bytes
+Struc. Handle           	WORD    	0042h
+Description             	STRING  	Default string
+Management Device Handle	WORD    	003Fh
+Component Handle        	WORD    	003Fh
+Threshold Handle        	WORD    	0040h
+==============================================================================
+
+
+[Type 035] -- Management Device Component
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	11 bytes
+Struc. Handle           	WORD    	0045h
+Description             	STRING  	Default string
+Management Device Handle	WORD    	003Fh
+Component Handle        	WORD    	0042h
+Threshold Handle        	WORD    	0043h
+==============================================================================
+
+
+[Type 035] -- Management Device Component
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	11 bytes
+Struc. Handle           	WORD    	0048h
+Description             	STRING  	Default string
+Management Device Handle	WORD    	003Fh
+Component Handle        	WORD    	0045h
+Threshold Handle        	WORD    	0046h
+==============================================================================
+
+
+[Type 035] -- Management Device Component
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	11 bytes
+Struc. Handle           	WORD    	004Bh
+Description             	STRING  	Default string
+Management Device Handle	WORD    	003Fh
+Component Handle        	WORD    	0048h
+Threshold Handle        	WORD    	0049h
+==============================================================================
+
+
+[Type 035] -- Management Device Component
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	11 bytes
+Struc. Handle           	WORD    	004Eh
+Description             	STRING  	Default string
+Management Device Handle	WORD    	003Fh
+Component Handle        	WORD    	004Bh
+Threshold Handle        	WORD    	004Ch
+==============================================================================
+
+
+[Type 035] -- Management Device Component
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	11 bytes
+Struc. Handle           	WORD    	0051h
+Description             	STRING  	Default string
+Management Device Handle	WORD    	003Fh
+Component Handle        	WORD    	004Eh
+Threshold Handle        	WORD    	004Fh
+==============================================================================
+
+
+[Type 035] -- Management Device Component
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	11 bytes
+Struc. Handle           	WORD    	0054h
+Description             	STRING  	Default string
+Management Device Handle	WORD    	003Fh
+Component Handle        	WORD    	0051h
+Threshold Handle        	WORD    	004Fh
+==============================================================================
+
+
+[Type 035] -- Management Device Component
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	11 bytes
+Struc. Handle           	WORD    	0057h
+Description             	STRING  	Default string
+Management Device Handle	WORD    	003Fh
+Component Handle        	WORD    	0054h
+Threshold Handle        	WORD    	004Fh
+==============================================================================
+
+
+[Type 036] -- Management Device Threshold Data
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	16 bytes
+Struc. Handle           	WORD    	0031h
+Lower T.N.C             	WORD    	0001h
+Upper T.N.C             	WORD    	0002h
+Lower T.C               	WORD    	0003h
+Upper T.C               	WORD    	0004h
+Lower T.C               	WORD    	0005h
+Upper T.C               	WORD    	0006h
+==============================================================================
+
+
+[Type 036] -- Management Device Threshold Data
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	16 bytes
+Struc. Handle           	WORD    	0034h
+Lower T.N.C             	WORD    	0001h
+Upper T.N.C             	WORD    	0002h
+Lower T.C               	WORD    	0003h
+Upper T.C               	WORD    	0004h
+Lower T.C               	WORD    	0005h
+Upper T.C               	WORD    	0006h
+==============================================================================
+
+
+[Type 036] -- Management Device Threshold Data
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	16 bytes
+Struc. Handle           	WORD    	0037h
+Lower T.N.C             	WORD    	0001h
+Upper T.N.C             	WORD    	0002h
+Lower T.C               	WORD    	0003h
+Upper T.C               	WORD    	0004h
+Lower T.C               	WORD    	0005h
+Upper T.C               	WORD    	0006h
+==============================================================================
+
+
+[Type 036] -- Management Device Threshold Data
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	16 bytes
+Struc. Handle           	WORD    	003Ah
+Lower T.N.C             	WORD    	0001h
+Upper T.N.C             	WORD    	0002h
+Lower T.C               	WORD    	0003h
+Upper T.C               	WORD    	0004h
+Lower T.C               	WORD    	0005h
+Upper T.C               	WORD    	0006h
+==============================================================================
+
+
+[Type 036] -- Management Device Threshold Data
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	16 bytes
+Struc. Handle           	WORD    	003Dh
+Lower T.N.C             	WORD    	8000h
+Upper T.N.C             	WORD    	8000h
+Lower T.C               	WORD    	8000h
+Upper T.C               	WORD    	8000h
+Lower T.C               	WORD    	8000h
+Upper T.C               	WORD    	8000h
+==============================================================================
+
+
+[Type 036] -- Management Device Threshold Data
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	16 bytes
+Struc. Handle           	WORD    	0041h
+Lower T.N.C             	WORD    	0007h
+Upper T.N.C             	WORD    	0008h
+Lower T.C               	WORD    	0008h
+Upper T.C               	WORD    	000Ah
+Lower T.C               	WORD    	000Bh
+Upper T.C               	WORD    	000Ch
+==============================================================================
+
+
+[Type 036] -- Management Device Threshold Data
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	16 bytes
+Struc. Handle           	WORD    	0044h
+Lower T.N.C             	WORD    	000Dh
+Upper T.N.C             	WORD    	000Eh
+Lower T.C               	WORD    	000Fh
+Upper T.C               	WORD    	0010h
+Lower T.C               	WORD    	0011h
+Upper T.C               	WORD    	0012h
+==============================================================================
+
+
+[Type 036] -- Management Device Threshold Data
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	16 bytes
+Struc. Handle           	WORD    	0047h
+Lower T.N.C             	WORD    	0001h
+Upper T.N.C             	WORD    	0002h
+Lower T.C               	WORD    	0003h
+Upper T.C               	WORD    	0004h
+Lower T.C               	WORD    	0005h
+Upper T.C               	WORD    	0006h
+==============================================================================
+
+
+[Type 036] -- Management Device Threshold Data
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	16 bytes
+Struc. Handle           	WORD    	004Ah
+Lower T.N.C             	WORD    	0001h
+Upper T.N.C             	WORD    	0002h
+Lower T.C               	WORD    	0003h
+Upper T.C               	WORD    	0004h
+Lower T.C               	WORD    	0005h
+Upper T.C               	WORD    	0006h
+==============================================================================
+
+
+[Type 036] -- Management Device Threshold Data
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	16 bytes
+Struc. Handle           	WORD    	004Dh
+Lower T.N.C             	WORD    	0001h
+Upper T.N.C             	WORD    	0002h
+Lower T.C               	WORD    	0003h
+Upper T.C               	WORD    	0004h
+Lower T.C               	WORD    	0005h
+Upper T.C               	WORD    	0006h
+==============================================================================
+
+
+[Type 036] -- Management Device Threshold Data
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	16 bytes
+Struc. Handle           	WORD    	0050h
+Lower T.N.C             	WORD    	0001h
+Upper T.N.C             	WORD    	0002h
+Lower T.C               	WORD    	0003h
+Upper T.C               	WORD    	0004h
+Lower T.C               	WORD    	0005h
+Upper T.C               	WORD    	0006h
+==============================================================================
+
+
+[Type 036] -- Management Device Threshold Data
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	16 bytes
+Struc. Handle           	WORD    	0053h
+Lower T.N.C             	WORD    	8000h
+Upper T.N.C             	WORD    	8000h
+Lower T.C               	WORD    	8000h
+Upper T.C               	WORD    	8000h
+Lower T.C               	WORD    	8000h
+Upper T.C               	WORD    	8000h
+==============================================================================
+
+
+[Type 036] -- Management Device Threshold Data
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	16 bytes
+Struc. Handle           	WORD    	0056h
+Lower T.N.C             	WORD    	8000h
+Upper T.N.C             	WORD    	8000h
+Lower T.C               	WORD    	8000h
+Upper T.C               	WORD    	8000h
+Lower T.C               	WORD    	8000h
+Upper T.C               	WORD    	8000h
+==============================================================================
+
+
+[Type 039] -- System Power Supply
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	22 bytes
+Struc. Handle           	WORD    	005Ch
+Power Unit Group        	BYTE    	01h
+Location                	STRING  	To Be Filled By O.E.M.
+Device Name             	STRING  	To Be Filled By O.E.M.
+Manufacturer            	STRING  	To Be Filled By O.E.M.
+Serial Number           	STRING  	To Be Filled By O.E.M.
+Asset Tag Number        	STRING  	To Be Filled By O.E.M.
+Model Part Number       	STRING  	To Be Filled By O.E.M.
+Revision Level          	STRING  	To Be Filled By O.E.M.
+Max Power Capacity      	WORD    	8000h
+Power Supply Char.      	WORD    	11A2h
+						Power supply is present
+						Power supply is unplugged from the wall
+						DMTF Input Voltage Range Switching:Manual
+						Status:Other
+						DMTF Power Supply Type:Linear
+						
+						Power Switch
+Input Voltage Probe Handle	WORD    	0058h
+Cooling Device Handle   	WORD    	005Ah
+Input Current Probe Handle	WORD    	005Bh
+==============================================================================
+
+
+[Type 041] -- Onboard Devices Extended Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	11 bytes
+Struc. Handle           	WORD    	005Dh
+Reference Designation   	BYTE    	 Onboard IGD
+Device Type             	BYTE    	83h
+						Device Enabled
+						Video
+Device TypeInstance     	BYTE    	01h
+Segment Group Number    	WORD    	0000h
+Bus Number              	BYTE    	00h
+==============================================================================
+
+
+[Type 041] -- Onboard Devices Extended Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	11 bytes
+Struc. Handle           	WORD    	005Eh
+Reference Designation   	BYTE    	 Onboard LAN
+Device Type             	BYTE    	85h
+						Device Enabled
+						Ethernet
+Device TypeInstance     	BYTE    	01h
+Segment Group Number    	WORD    	0000h
+Bus Number              	BYTE    	00h
+==============================================================================
+
+
+[Type 041] -- Onboard Devices Extended Information
+---------------------------------------
+Name				Type		Data
+====				====		====
+Struc. Length           	BYTE    	11 bytes
+Struc. Handle           	WORD    	005Fh
+Reference Designation   	BYTE    	 Onboard 1394
+Device Type             	BYTE    	81h
+						Device Enabled
+						Other
+Device TypeInstance     	BYTE    	01h
+Segment Group Number    	WORD    	0000h
+Bus Number              	BYTE    	03h
